@@ -12,10 +12,10 @@ class Program
         int x = int.Parse(Console.ReadLine());
         Console.WriteLine("Enter the coordinates of the point y: ");
         int y = int.Parse(Console.ReadLine());
-        Isinclude(x,y,R);
-        CircleEquation(x,y,R);
+        IsIncludeInRectangle(x,y,R);
+        IsIncludeInCircle(x,y,R);
     }
-    public static void Isinclude(int x, int y, int R)
+    public static void IsIncludeInRectangle(int x, int y, int R)
     {
         if ((x > 0 && x < (2*R)) && (y > -R && y < 0))
         {
@@ -30,15 +30,19 @@ class Program
             Console.WriteLine("not in rectangle");
         }
     }
-    public static void CircleEquation(int x,int y, int R)
+    public static void IsIncludeInCircle(int x,int y, int R)
     {
         if ((x * x) + ((y - R) * (y - R)) < (R * R))
         {
-            Console.WriteLine("The circle equation is inside");
+            Console.WriteLine("The circle is inside");
         }
         else if ((x * x) + ((y - R) * (y - R)) == (R * R))
         {
             Console.WriteLine("The circle equation is on the verge");
+        }
+        else
+        {
+            Console.WriteLine("not in circle");
         }
     }
 }
