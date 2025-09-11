@@ -36,5 +36,9 @@ class Program
         {
             Console.WriteLine("The circle equation is inside");
         }
+        else if ((x * x) + ((y * y) + (R * R)) == (R * R))
+        {
+            Console.WriteLine("The circle equation is on the verge");
+        }
     }
 }
