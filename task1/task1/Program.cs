@@ -32,11 +32,11 @@ class Program
     }
     public static void CircleEquation(int x,int y, int R)
     {
-        if ((x * x) + ((y * y) - (R * R)) < (R * R))
+        if ((x * x) + ((y - R) * (y - R)) < (R * R))
         {
             Console.WriteLine("The circle equation is inside");
         }
-        else if ((x * x) + ((y * y) + (R * R)) == (R * R))
+        else if ((x * x) + ((y - R) * (y - R)) == (R * R))
         {
             Console.WriteLine("The circle equation is on the verge");
         }
