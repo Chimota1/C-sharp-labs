@@ -24,5 +24,9 @@ class Program
         {
             Console.WriteLine("on the verge in rectangle");
         }
+        else
+        {
+            Console.WriteLine("not in rectangle");
+        }
     }
 }
