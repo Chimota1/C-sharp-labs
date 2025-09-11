@@ -20,5 +20,9 @@ class Program
         {
             Console.WriteLine("The point match in rectangle");
         }
+        else if ((x == 0 || x == (2 * R)) || (y == -R || y == 0))
+        {
+            Console.WriteLine("on the verge in rectangle");
+        }
     }
 }
