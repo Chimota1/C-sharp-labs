@@ -13,6 +13,7 @@ class Program
         Console.WriteLine("Enter the coordinates of the point y: ");
         int y = int.Parse(Console.ReadLine());
         Isinclude(x,y,R);
+        CircleEquation(x,y,R);
     }
     public static void Isinclude(int x, int y, int R)
     {
@@ -27,6 +28,13 @@ class Program
         else
         {
             Console.WriteLine("not in rectangle");
+        }
+    }
+    public static void CircleEquation(int x,int y, int R)
+    {
+        if ((x * x) + ((y * y) - (R * R)) < (R * R))
+        {
+            Console.WriteLine("The circle equation is inside");
         }
     }
 }
