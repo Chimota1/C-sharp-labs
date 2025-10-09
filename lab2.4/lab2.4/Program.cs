@@ -38,6 +38,7 @@ namespace PKPZ
                 {
                     Console.Write($"{arr[i][j],5}");
                 }
+                Console.WriteLine();
             }
             Console.WriteLine();
         }

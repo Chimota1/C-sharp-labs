@@ -9,15 +9,38 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace lab3._1;
-
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
+namespace lab3._1
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+
+        private void Process_Click(object sender, RoutedEventArgs e)
+        {
+            string text = InputBox.Text;
+            char[] word = text.ToCharArray();
+
+            newWord(word);                     
+
+            ResultBlock.Text = new string(word);
+        }
+
+        private void newWord(char[] word)
+        {
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] >= 'A' && word[i] <= 'Z')
+                {
+                    if (i != 0 && char.IsUpper(word[i]))
+                    {
+                        word[i - 1] = ' ';
+                    }
+                }
+            }
+        }
     }
 }

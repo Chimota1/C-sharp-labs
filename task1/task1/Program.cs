@@ -2,7 +2,6 @@
 
 using System;
 
-
 class Program
 {
     static void Main(string[] args)
@@ -32,11 +31,11 @@ class Program
     }
     public static void IsIncludeInCircle(int x,int y, int R)
     {
-        if ((x * x) + ((y - R) * (y - R)) < (R * R))
+        if (x<0 && y>0 && (x * x) + ((y - R) * (y - R)) < (R * R))
         {
-            Console.WriteLine("The circle is inside");
+            Console.WriteLine("The circle is inside ");
         }
-        else if ((x * x) + ((y - R) * (y - R)) == (R * R))
+        else if (x<=0 && y>=0 && (x * x) + ((y - R) * (y - R)) < (R * R))
         {
             Console.WriteLine("The circle equation is on the verge");
         }
