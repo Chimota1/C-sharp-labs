@@ -54,27 +54,37 @@ public partial class MainWindow : Window
 
     private void FindBiggerThan10()
     {
-        string text = Output.Text;
         string data = File.ReadAllText("D:\\PKPZ\\C-sharp-labs\\lab4.1\\lab4.1\\Input_data.txt");
         string[] lines = data.Split('\n', StringSplitOptions.RemoveEmptyEntries);
         string outputPath = "D:\\PKPZ\\C-sharp-labs\\lab4.1\\lab4.1\\Output_data.txt";
+
         string guard = null;
+        string yearLine = null;
+
         foreach (string line in lines)
         {
             if (line.StartsWith("Охоронець"))
             {
                 guard = line;
             }
-            if (line.StartsWith("Рік працевлаштування:"))
+            else if (line.StartsWith("Рік працевлаштування:"))
             {
-                string yearString = line.Split(':')[1].Trim();
-                int year = int.Parse(yearString);
+                yearLine = line;
+            }
+            
+            if (guard != null && yearLine != null)
+            {
+                int year = int.Parse(yearLine.Split(':')[1].Trim());
                 if (year <= 2015)
                 {
-                    Output.Text = guard;
-                    File.WriteAllText(outputPath, guard);
+                    Output.Text += guard + Environment.NewLine;
+                    File.AppendAllText(outputPath, guard + Environment.NewLine);
                 }
+                
+                guard = null;
+                yearLine = null;
             }
         }
     }
+
 }
