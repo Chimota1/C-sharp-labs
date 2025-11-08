@@ -80,7 +80,7 @@ public partial class MainWindow : Window
                     sessionCount++;
                     File.AppendAllLines(session, new string[] { $"Дія{sessionCount}: Обчислення" });
                     break;
-                case "-":
+                case "-":   
                     ResultNumber.Text = (n1 - n2).ToString();
                     sessionCount++;
                     File.AppendAllLines(session, new string[] { $"Дія{sessionCount}: Обчислення" });

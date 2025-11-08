@@ -1,0 +1,57 @@
+﻿<Window x:Class="lab7._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Itinerary Manager" Height="450" Width="800">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Введення даних -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+            <StackPanel Margin="10">
+                <TextBlock Text="Початковий пункт:"/>
+                <TextBox x:Name="FirstBox" Width="120"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Кінцевий пункт:"/>
+                <TextBox x:Name="FinalBox" Width="120"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Номер маршруту:"/>
+                <TextBox x:Name="NumBox" Width="80"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Відстань (км):"/>
+                <TextBox x:Name="DistanceBox" Width="80"/>
+            </StackPanel>
+
+            <Button x:Name="AddButton" Content="Додати" Width="100" Margin="10" Click="AddBtn_Click"></Button>
+        </StackPanel>
+
+        <!-- Кнопки керування -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1" HorizontalAlignment="Center">
+            <Button x:Name="SortButton" Content="Сортувати за відстанню" Width="200" Margin="10" Click="SortBtn_Click">
+            </Button>
+            <TextBox x:Name="SearchNumBox" Width="80" Margin="10"/>
+            <Button x:Name="SearchButton" Content="Пошук" Width="100" Margin="10" Click="SearchBtn">
+            </Button>
+        </StackPanel>
+
+        <!-- Виведення тексту -->
+        <TextBlock x:Name="OutputBlock"
+                   Grid.Row="2"
+                   Width="760"
+                   Height="200"
+                   Margin="0,10,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

@@ -1,0 +1,66 @@
+﻿<Window x:Class="lab_7._3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Itinerary Manager" Height="600" Width="1200">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+            <StackPanel Margin="10">
+                <TextBlock Text="Назва продукту:"/>
+                <TextBox x:Name="NameOfProductBox" Width="120"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Виробник:"/>
+                <TextBox x:Name="CompanyBox" Width="120"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Дата виробництва:"/>
+                <TextBox x:Name="DateBox" Width="80"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Термін придатності:"/>
+                <TextBox x:Name="ExpirationDateBox" Width="80"/>
+            </StackPanel>
+            
+            <StackPanel Margin="10">
+                <TextBlock Text="Ціна:"/>
+                <TextBox x:Name="CostBox" Width="80"/>
+            </StackPanel>
+            <Button x:Name="AddButton" Content="Додати" Width="100" Margin="10"></Button>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBox Name="Input1" Width="100" Margin="10,0"></TextBox>
+                <Button Name="OutputInfoBtn" Width="200" Height="30" Content="Введіть термін придатності"></Button>
+            </StackPanel>
+            
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBox Name="Input2" Width="100" Margin="10,0"></TextBox>
+                <Button Name="OutputInfoByMonthBtn" Width="200" Height="30" Content="Введіть номер місяця"></Button>
+            </StackPanel>
+            
+            <Button Name="OutputInfoBy2Days" Margin="10,0" Width="200" Height="30" Content="Закінчуються через 2 дня"></Button>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+            <StackPanel Margin="10">
+                <TextBlock Text="Найменування товару:"/>
+                <TextBox Width="200" Height="30"></TextBox>
+            </StackPanel>
+            <Button Name="OutputByFreshBtn" Width="100" Height="40" Content="За свіжістю" Margin="10,0"></Button>
+            <Button Name="OutputByStaleBtn" Width="100" Height="30" Content="На списання"></Button>
+        </StackPanel>
+        <TextBlock Grid.Row="3" Height="Auto" Name="Result"></TextBlock>
+    </Grid>
+</Window>

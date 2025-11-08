@@ -1,0 +1,32 @@
+﻿<Window x:Class="lab5._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab5._1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1200">
+    <Grid>
+        <Button Name="StartButton" Width="500" Height="100" Content="Init Class" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible" Click="InitClick"></Button>
+        <Button Name="Next" Width="50" Height="50" Content=">" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20" Visibility="Hidden" Click="NextBtn"></Button>
+        <TextBox Name="Mark" Width="200" Height="50" Margin="0,0,500,300" BorderThickness="2" BorderBrush="DarkGreen" Visibility="Hidden"></TextBox>
+        <TextBox Name="Name" Width="200" Height="50" Margin="0,0,0,300" BorderThickness="2" BorderBrush="DarkGreen" Visibility="Hidden"></TextBox>
+        <TextBox Name="Year" Width="200" Height="50" Margin="500,0,0,300" BorderThickness="2" BorderBrush="DarkGreen" Visibility="Hidden"></TextBox>
+        <TextBox Name="Color" Width="200" Height="50" Margin="0,150,700,0" BorderThickness="2" BorderBrush="DarkGreen" Visibility="Hidden"></TextBox>
+        <TextBox Name="WheelDiameter" Width="200" Height="50" Margin="0,150,200,0" BorderThickness="2" BorderBrush="DarkGreen" Visibility="Hidden"></TextBox>
+        <TextBox Name="HeightOfSaddle" Width="200" Height="50" Margin="300,150,0,0" BorderThickness="2" BorderBrush="DarkGreen" Visibility="Hidden"></TextBox>
+        <TextBox Name="TypeOfFrame" Width="200" Height="50" Margin="800,150,0,0" BorderBrush="DarkGreen" BorderThickness="2" Visibility="Hidden"></TextBox>
+        <Button Name="MarkButton" Width="200" Height="50" Content="Set Mark" FontSize="20" Margin="0,0,500,150" Visibility="Hidden" Click="SetMarkBtn"></Button>
+        <Button Name="NameButton" Width="200" Height="50" Content="Set Name" FontSize="20" Margin="0,0,0,150" Visibility="Hidden" Click="SetNameBtn"></Button>
+        <Button Name="YearButton" Width="200" Height="50" Content="Set Year" FontSize="20" Margin="500,0,0,150" Visibility="Hidden" Click="SetYearBtn"></Button>
+        <Button Name="ColorButton" Width="200" Height="50" Content="Set Color" FontSize="20" Margin="0,300,700,0" Visibility="Hidden" Click="SetColorBtn"></Button>
+        <Button Name="WheelButton" Width="200" Height="50" Content="Set Wheel Diameter" FontSize="20" Margin="0,300,200,0" Visibility="Hidden" Click="SetWheelDiameterBtn"></Button>
+        <Button Name="SaddleButton" Width="200" Height="50" Content="Set Height of Saddle" FontSize="20" Margin="300,300,0,0" Visibility="Hidden" Click="SetHeightSaddlelBtn"></Button>
+        <Button Name="FrameButton" Width="200" Height="50" Content="Set Type of Frame" FontSize="20" Margin="800,300,0,0" Visibility="Hidden" Click="SetTypeOfFrameBtn"></Button>
+        <TextBox Name="Output" Width="700" Height="150" Margin="20" VerticalAlignment="Top" Visibility="Hidden"></TextBox>
+        <Button Name="GetRadiusButton" Width="200" Height="50" Content="Radius" FontSize="20" Margin="0,0,700,0" Visibility="Hidden" Click="GetRadiusBtn"></Button>
+        <Button Name="FullInfoButton" Width="200" Height="50" Content="Full info" FontSize="20" Margin="0,0,250,0" Visibility="Hidden" Click="FullInfoBtn"></Button>
+        <Button Name="AtributtesButton" Width="200" Height="50" Content="Atributes" FontSize="20" Margin="200,0,0,0" Visibility="Hidden" Click="AtributtesBtn"></Button>
+        <Button Name="AllGetters" Width="200" Height="50" Content="Getters" FontSize="20" Margin="650,0,0,0" Visibility="Hidden" Click="GetAllBtn"></Button>
+    </Grid>
+</Window>

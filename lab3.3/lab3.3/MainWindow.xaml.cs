@@ -25,7 +25,7 @@ public partial class MainWindow : Window
     {
         string text = Text.Text;
         
-        string[] words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        string[] words = text.Split(new char[] { ' ', ',', '.', '!', '?', ';', ':', '-', '(', ')', '"', '\'' }, StringSplitOptions.RemoveEmptyEntries);
 
         string bestWord = "";
         int maxCount = 0;
