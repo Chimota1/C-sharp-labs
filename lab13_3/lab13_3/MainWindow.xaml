@@ -1,0 +1,40 @@
+﻿<Window x:Class="lab13_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Universal Recognizer" Height="600" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Верхня панель -->
+            <RowDefinition Height="*"/>    <!-- Текст вхідний -->
+            <RowDefinition Height="Auto"/> <!-- Кнопка обробки -->
+            <RowDefinition Height="*"/>    <!-- Результат -->
+        </Grid.RowDefinitions>
+
+        <!-- 1. Завантаження файлу -->
+        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="0,0,0,10">
+            <Label Content="Вхідний текст (з файлу):" FontWeight="Bold"/>
+            <Button Click="EnterClick" Content="Відкрити текстовий файл" Height="30" Margin="0,5"/>
+        </StackPanel>
+
+        <!-- 2. Відображення вхідного тексту -->
+        <TextBox Grid.Row="1" Name="Input" TextWrapping="Wrap" 
+                 VerticalScrollBarVisibility="Auto" AcceptsReturn="True" 
+                 IsReadOnly="True" Background="#F0F0F0"/>
+
+        <!-- 3. Кнопка запуску аналізу -->
+        <Button Grid.Row="2" Click="OutputClick" Content="Розпізнати та зберегти звіт" 
+                Height="40" Margin="0,10" FontWeight="Bold" Background="#DDDDDD"/>
+
+        <!-- 4. Вивід результатів -->
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Результати розпізнавання:" FontWeight="Bold"/>
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <TextBlock Name="OutputText" FontSize="14" TextWrapping="Wrap" FontFamily="Consolas"/>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

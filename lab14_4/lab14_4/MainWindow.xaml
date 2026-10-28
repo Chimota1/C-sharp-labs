@@ -1,0 +1,28 @@
+﻿<Window x:Class="PingTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ping Tool" Height="450" Width="600">
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBox x:Name="NetworkTextBox"
+                     Width="200"
+                     Text="192.168.1.0"/>
+            <Button x:Name="StartButton"
+                    Width="150"
+                    Content="Сканувати мережу"
+                    Click="StartButton_Click"/>
+        </StackPanel>
+
+        <ListBox x:Name="ResultList"
+                 Grid.Row="1"
+                 Margin="0,10,0,0"/>
+
+    </Grid>
+</Window>
